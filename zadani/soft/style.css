@@ -10,15 +10,34 @@
 
 body {
     margin: 0;
-    padding: 0;
+    padding: 2rem;
     background-color: #f5f5f5;
     font-family: 'Merriweather', serif;
     font-size: 16px;
     line-height: 1.6;
+    text-align: left;
+    width: 100%
 }
 
 
 /* HLAVICKA */
+
+img {
+  width: 100%;
+  height:auto;
+}
+
+
+
+header {
+  background-image: url('../../images/island-hlavicka.jpg');
+  background-size: cover;
+  text-align: center;
+  width:fit-content;
+  padding: 1.5rem;
+  background-color: none;
+  color:whitesmoke;
+}
 
 .titulek {
     font-family: 'Raleway', serif;
@@ -27,17 +46,175 @@ body {
 
 /* MENU */
 
+h2::after {
+  text-decoration-style: solid;
+  text-decoration-line: underline;
+  text-align: left;
+  text-decoration-color:##629edb;
+}
 
+.menu {
+  list-style: none;
+  text-align: center;
+  font-size: medium;
+  padding-bottom: 2rem;
+}
+
+.menu a:link {
+  color: #bebebe;
+  /*text-transform: uppercase;*/
+}
+
+hr {
+  color: #e5e4e2;
+  width: 300px;
+  text-align: center;
+}
+
+li {
+  padding-top: 0.8;
+  padding-bottom: 0.2rem;
+}
 
 
 /* OBSAH */
 
+p a:link {
+  text-decoration: none;
+  color: #bebebe;
+}
 
+.popisek {
+  color: #bebebe;
+  text-align: center;
+  display:block;
+}
 
 
 /* FOTOGALERIE */
 
+.galerie {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding-left: 0rem;
+  background-color: #f5f5f5;
+  text-align: left;
 
+  /*padding:0rem;
+  text-align: center;*/
+  color:#bebebe;
+}
+
+figure {
+  width:100%;
+  padding: 0rem;
+  text-align: left;
+  margin-left: 0rem;
+}
+
+span a:link {
+  color: #bebebe;
+}
+
+figcaption {
+  display: block;
+}
 
 
 /* PATICKA */
+
+.paticka {
+  color: #bebebe;
+  background-color: #eaecee;
+  text-align: center;
+  padding-top: 1.5rem;
+  padding-bottom: 0.2rem;
+}
+
+
+@media screen and (min-width: 500px) and (max-width: 1000px) {
+
+  .galerie {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    padding: 0rem;
+    margin: 0rem;
+    float: left;
+  }
+
+  .galerie img {
+    min-width: 250px;
+    max-width: 500px;
+    height: auto;
+  }
+
+  .foto {
+    width: 50%;
+  }
+
+  .popisek {
+    display: none;
+  }
+
+  .popisek:hover {
+    display:inline-block;
+  }
+
+
+
+  .popisek-copy {
+    display: none;
+  }
+
+  .popisek:hover {
+    display:inline-block;
+  }
+
+
+  figcaption {
+    transform: translateY(-80px);
+  }
+
+  figcaption:hover {
+    
+  }
+
+}
+
+@media screen and (min-width: 1001px) {
+
+  header {
+    position:fixed;
+    z-index: -1;
+    background-size: 100%;
+    padding-right: 2rem;
+    padding-bottom: 12rem;
+    margin-right: 2rem;
+    padding-top:12rem;
+    margin-top:0rem;
+  }
+
+  main {
+    margin-top: 450px;
+    margin-left: 200px;
+    margin-right: 200px;
+    box-shadow color: #bebebe;
+    padding: 2rem;
+    background-color: whitesmoke;
+  }
+
+  .galerie img {
+    width: 33.333%;
+    height: auto;
+    margin: none;
+  }
+
+  .galerie {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
